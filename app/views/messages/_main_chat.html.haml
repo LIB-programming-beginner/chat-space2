@@ -51,8 +51,8 @@
         さらに前へ進みます。
   .main_chat__form
     .main_chat__form__message-form
-      %input.main_chat__form__message-form__type-box{:type => "text", :placeholder => "type a message", :name => "type-box"}
+      %input.main_chat__form__message-form__type-box{type: "text", placeholder: "type a message", name: "type-box"}
       %label.main_chat__form__message-form__insert-image{class: "main_chat__form__message-form__insert-image"}
         = icon('fas', 'image')
-        %input.main_chat__form__message-form__insert-image__file{:type => "file", :name => "file", :id => "file"}
-    %input.main_chat__form__submit{:type => "submit", :name => "submit", :value => "Send"}
+        %input.main_chat__form__message-form__insert-image__file{type: "file", name: "file", id: "file"}
+    %input.main_chat__form__submit{type: "submit", name: "submit", value: "Send"}
