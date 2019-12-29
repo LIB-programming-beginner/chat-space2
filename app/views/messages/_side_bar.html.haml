@@ -1,0 +1,54 @@
+.side_bar
+  .side_bar__user-name
+    .side_bar__user-name__top-items
+      .side_bar__user-name__top-items__name
+        kuro
+      .side_bar__user-name__top-items__icons
+        .side_bar__user-name__top-items__icons__edit-user
+        = link_to "#", class: "side_bar__user-name__top-items__icons__edit-user__btn" do
+          %i.fa.fa-cog
+        .side_bar__user-name__top-items__icons__create-group
+        = link_to "#", class: "side_bar__user-name__top-items__icons__create-group__btn" do
+          %i.fa.fa-edit
+  .side_bar__group-list
+    - initial_message = "まだメッセージはありません"
+    .side_bar__group-list__group
+      .side_bar__group-list__group__name
+        LET_IT_BE
+      .side_bar__group-list__group__message
+        = initial_message
+    .side_bar__group-list__group
+      .side_bar__group-list__group__name
+        できることに集中する
+      .side_bar__group-list__group__message
+        = initial_message
+    .side_bar__group-list__group
+      .side_bar__group-list__group__name
+        できないことはとりあえず、調べてみる
+      .side_bar__group-list__group__message
+        = initial_message
+    .side_bar__group-list__group
+      .side_bar__group-list__group__name
+        調べて自分なりに答えを探す
+      .side_bar__group-list__group__message
+        = initial_message
+    .side_bar__group-list__group
+      .side_bar__group-list__group__name
+        考えてもわからない時は質問する
+      .side_bar__group-list__group__message
+        = initial_message
+    .side_bar__group-list__group
+      .side_bar__group-list__group__name
+        その繰り返し  人と競争しない
+      .side_bar__group-list__group__message
+        = initial_message
+    .side_bar__group-list__group
+      .side_bar__group-list__group__name
+        昨日の自分と競争する
+      .side_bar__group-list__group__message
+        = initial_message
+    .side_bar__group-list__group
+      .side_bar__group-list__group__name
+        常にアウトプットを心がける
+      .side_bar__group-list__group__message
+        = initial_message
