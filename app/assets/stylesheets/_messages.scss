@@ -58,10 +58,14 @@ $color-blue: #38aef0;
       &__name{
         font-size: 15px;
         margin-bottom: 5px;
+        color: $color-white;
+        text-decoration-line: none;
       }
       &__message{
         font-size: 11px;
         margin-bottom: 40px;
+        color: $color-white;
+        text-decoration-line: none;
       }
     }
   }
