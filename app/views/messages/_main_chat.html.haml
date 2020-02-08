@@ -1,0 +1,22 @@
+.main_chat
+  .main_chat__group-info
+    .main_chat__group-info__info-menu
+      .main_chat__group-info__info-menu__group-name
+        = @group.name
+      .main_chat__group-info__info-menu__member-name
+        = @group.users.each do |f|
+          = f.name
+    .main_chat__group-info__edit-menu
+      .main_chat__group-info__edit-menu__edit
+        = link_to 'Edit', edit_group_path(@group), class: "Editlink"
+  .main_chat__message-list
+    = render @messages
+  .main_chat__form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'main_chat__form__message__tipe-box', placeholder: 'type a message'
+      .main_chat__form__insert
+        = f.label :image, class: 'main_chat__form__insert__image' do
+          = icon('fas', 'image', class: 'main_chat__form__insert__icon')
+          = f.file_field :image, class: 'main_chat__form__insert__hidden'
+      .main_chat__form__submit
+        = f.submit 'Send', class: 'main_chat__form__submit'

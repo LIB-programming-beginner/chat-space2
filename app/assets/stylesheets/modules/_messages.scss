@@ -134,11 +134,13 @@ $color-blue: #38aef0;
           display: $name_date_display;
         }
       }
-      &__message-text{
-        padding-left: 40px;
-        color: #434A54;
-        font-size: 14px;
-        margin-bottom: 46px;
+      &__content{
+        &__message-text{
+          padding-left: 40px;
+          color: #434A54;
+          font-size: 14px;
+          margin-bottom: 46px;
+        }
       }
     }
   }
@@ -146,25 +148,28 @@ $color-blue: #38aef0;
     background-color: #d2d2d2;
     height: 90px;
     padding: 20px 40px;
-    display: flex;
-    &__message-form{
+    &__message{
       background-color: $color-white;
       height: 50px;
+      border-style: none;
+      color: #434A54;
+      position: relative;
       width: 100%;
-      display: flex;
-      &__type-box{
-        color: #434A54;
-        width: 100%;
-        padding: 0 50px 0 10px;
+      &__tipe-box{
+        line-height: 50px;
+        padding: 0 40px 0 10px;
         border-style: none;
-      }
-      &__insert-image{
+      } 
+    }
+    &__insert{
+      &__image{
         font-size: 1.3rem;
         padding: 10px 10px 0 0;
-        &__file{
-          display: none;
-        }
-      }   
+        position: absolute;
+      }  
+      &__hidden{
+        display: none
+      }
     }
     &__submit{
       background-color: $color-blue;
@@ -173,7 +178,7 @@ $color-blue: #38aef0;
       margin-left: 15px;
       text-align: center;
       line-height: 50px;
-      color: $color-white; 
-    }  
+      color: $color-white;
+    }
   }
 }
