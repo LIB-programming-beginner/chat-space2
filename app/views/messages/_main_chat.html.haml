@@ -4,7 +4,7 @@
       .main_chat__group-info__info-menu__group-name
         = @group.name
       .main_chat__group-info__info-menu__member-name
-        = @group.users.each do |f|
+        - @group.users.each do |f|
           = f.name
     .main_chat__group-info__edit-menu
       .main_chat__group-info__edit-menu__edit
