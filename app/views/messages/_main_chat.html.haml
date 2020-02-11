@@ -4,7 +4,7 @@
       .main_chat__group-info__info-menu__group-name
         = @group.name
       .main_chat__group-info__info-menu__member-name
-        = @group.users.each do |f|
+        - @group.users.each do |f|
           = f.name
     .main_chat__group-info__edit-menu
       .main_chat__group-info__edit-menu__edit
@@ -13,10 +13,9 @@
     = render @messages
   .main_chat__form
     = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'main_chat__form__message__tipe-box', placeholder: 'type a message'
-      .main_chat__form__insert
-        = f.label :image, class: 'main_chat__form__insert__image' do
-          = icon('fas', 'image', class: 'main_chat__form__insert__icon')
-          = f.file_field :image, class: 'main_chat__form__insert__hidden'
-      .main_chat__form__submit
-        = f.submit 'Send', class: 'main_chat__form__submit'
+      = f.text_field :content, class: 'main_chat__form__message__type-box', placeholder: 'type a message'
+      .main_chat__form__message__image
+        = f.label :image, class: 'main_chat__form__message__type-box__image' do
+          = icon('fas', 'image', class: 'main_chat__form__message__type-box__image__icon')
+          = f.file_field :image, class: 'main_chat__form__message__type-box__image__hidden'
+      = f.submit 'Send', class: 'main_chat__form__submit'

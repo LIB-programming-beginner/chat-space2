@@ -53,6 +53,7 @@ $color-blue: #38aef0;
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     padding: 20px 20px 0;
+    overflow: scroll;
     &__group{
       width: 260px;
       &__name{
@@ -114,6 +115,7 @@ $color-blue: #38aef0;
     background-color: #fafafa;
     height: calc(100vh - 190px);
     padding-top: 35px;
+    overflow: scroll;
     $name_date_display: inline;
     &__message{
       &__info{
@@ -148,37 +150,40 @@ $color-blue: #38aef0;
     background-color: #d2d2d2;
     height: 90px;
     padding: 20px 40px;
-    &__message{
-      background-color: $color-white;
-      height: 50px;
-      border-style: none;
-      color: #434A54;
-      position: relative;
-      width: 100%;
-      &__tipe-box{
-        line-height: 50px;
+    .new_message{
+      display: flex;
+      .main_chat__form__message__type-box{
+        height: 50px;
+        width: 100%;
         padding: 0 40px 0 10px;
+        color: #434A54;
+        background-color: $color-white;
         border-style: none;
-      } 
-    }
-    &__insert{
-      &__image{
-        font-size: 1.3rem;
-        padding: 10px 10px 0 0;
-        position: absolute;
-      }  
-      &__hidden{
-        display: none
+        line-height: 50px;
+        border-style: none;
+        margin-right: 15px;
+        position: relative;
+        &__image{
+          &__icon{
+            font-size: 1.3rem;
+            padding: 15px 0 0 0;
+            position: absolute;
+            right: 155px;
+            bottom: 35px;
+          }
+          &__hidden{
+            display: none;
+          }
+        }
       }
-    }
-    &__submit{
-      background-color: $color-blue;
-      width: 100px;
-      height: 50px;
-      margin-left: 15px;
-      text-align: center;
-      line-height: 50px;
-      color: $color-white;
+      .main_chat__form__submit{
+        background-color: $color-blue;
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        color: $color-white;
+      }
     }
   }
 }
