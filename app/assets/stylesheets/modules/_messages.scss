@@ -60,15 +60,17 @@ $color-blue: #38aef0;
         font-size: 15px;
         margin-bottom: 5px;
         color: $color-white;
-        text-decoration-line: none;
       }
       &__message{
         font-size: 11px;
         margin-bottom: 40px;
         color: $color-white;
-        text-decoration-line: none;
+        
       }
     }
+  }
+  .LINK{
+    text-decoration: none;
   }
 }
 
@@ -100,13 +102,14 @@ $color-blue: #38aef0;
         height: 40px;
         width: 72px;
         margin:28px 0 0 20px;
-        border-width: 1px solid $color-blue;
         font-size: 16px;
         text-align: center;
         line-height: 40px;
+        border: 1px solid $color-blue;
         .Editlink{
         color: #38aef0;
         text-decoration: none;
+        
         }
       }
     }
